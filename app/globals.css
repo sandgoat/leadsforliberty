@@ -1,0 +1,632 @@
+@import 'tailwindcss';
+
+/* Playfair Display + Outfit via next/font are loaded in layout.tsx */
+/* Do NOT @import Google Fonts here */
+
+@theme {
+  /* Brand palette */
+  --color-navy: #0D1F3C;
+  --color-crimson: #B91C1C;
+  --color-linen: #FAF8F5;
+  --color-stone: #F3F0EB;
+  --color-warm-gray: #6B6560;
+  --color-warm-border: #E4DDD5;
+
+  /* Refined antique-gold accent (heritage Americana) */
+  --color-gold: #C2942A;
+
+  /* ── Legacy "patriotic" aliases used by the inner-page layouts ─────────
+     The service / industry / about / legal pages were authored against a
+     palette (liberty-blue, independence-red, eagle-gold, parchment, iron)
+     that was never defined — so every one of those classes rendered with
+     no color. These aliases map that palette onto the real brand so all
+     inner pages render correctly and cohesively. */
+  --color-liberty-blue: #0D1F3C;     /* → navy   */
+  --color-independence-red: #B91C1C; /* → crimson */
+  --color-eagle-gold: #C2942A;       /* → gold    */
+  --color-parchment: #FAF8F5;        /* → linen   */
+  --color-parchment-400: #E4DDD5;    /* → warm border */
+  --color-iron: #2E2A26;             /* warm near-black body text */
+
+  /* Font families */
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-outfit);
+  /* Make the generic `font-serif` / `font-sans` utilities the brand faces,
+     so inner-page layouts that use them match the homepage typography. */
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+
+  /* Typography scale */
+  --text-display-xl: 4.5rem;
+  --text-display-lg: 3.5rem;
+  --text-display-md: 2.5rem;
+  --text-display-sm: 1.875rem;
+
+  /* Spacing rhythm */
+  --section-padding: 7rem 0;
+}
+
+/* z-index scale: nav=40, announce/header-stack=50, modal=100 */
+
+/* Header stack height — announcement bar (32px) + header (74px) */
+:root {
+  --header-stack-h: 106px;
+}
+
+/* Announcement bar may wrap to 2 lines on narrow phones */
+@media (max-width: 480px) {
+  :root { --header-stack-h: 122px; }
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  h1 {
+    text-wrap: unset; /* let the forced <span className="block"> handle line breaks */
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  background: var(--color-linen);
+  color: var(--color-navy);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--color-linen);
+  min-height: 100dvh;
+}
+
+/* Focus visible ring */
+:focus-visible {
+  outline: 2px solid var(--color-crimson);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: #0D1F3C;
+  color: #FAF8F5;
+}
+
+/* Typography utilities */
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-body {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+}
+
+/* Button base */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-crimson);
+  color: #ffffff;
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 150ms ease, transform 100ms ease, box-shadow 150ms ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: #991B1B;
+  box-shadow: 0 4px 14px rgba(185, 28, 28, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-navy);
+  padding: 0.75rem 1.75rem;
+  border-radius: 6px;
+  font-family: var(--font-outfit), sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 2px solid var(--color-navy);
+  transition: background 150ms ease, color 150ms ease, transform 100ms ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background: var(--color-navy);
+  color: #ffffff;
+}
+
+.btn-outline:active {
+  transform: translateY(1px);
+}
+
+/* Section spacing — three tiers */
+.section-sm {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.section-lg {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+/* Prose constraint */
+.prose-body {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-warm-gray);
+  max-width: 62ch;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-warm-border);
+}
+
+/* Remove default list styles inside nav/menus */
+nav ul, nav ol {
+  list-style: none;
+}
+
+/* Prevent motion sections from being permanently invisible
+   if JS animation doesn't fire (SSR, reduced-motion, slow hydration) */
+section {
+  opacity: 1;
+}
+
+/* Page container — consistent horizontal padding + max-width */
+/* Guaranteed in CSS so Tailwind scan not required */
+.page-container {
+  width: 100%;
+  max-width: 72rem; /* 1152px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;   /* 24px */
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding-left: 2.5rem;   /* 40px */
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    padding-left: 4rem;   /* 64px */
+    padding-right: 4rem;
+  }
+}
+
+/* Hero split layout — text + live demo */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Let grid tracks shrink below their content so fixed-width children
+   (e.g. the calendar demo) never force horizontal overflow on mobile. */
+.hero-grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4rem;
+  }
+}
+
+/* Industry tile hover */
+.industry-tile {
+  background: var(--color-linen);
+}
+
+.industry-tile:hover,
+.industry-tile:focus-visible {
+  background: var(--color-navy);
+}
+
+.industry-tile:hover .industry-icon,
+.industry-tile:focus-visible .industry-icon {
+  color: var(--color-crimson);
+}
+
+.industry-tile:hover .industry-label,
+.industry-tile:focus-visible .industry-label {
+  color: var(--color-linen);
+}
+
+/* Problem column dividers */
+.problem-col {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .problem-col {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .problem-col + .problem-col .md-col-inner {
+    border-left: 1px solid var(--color-warm-border);
+    padding-left: 2rem;
+  }
+}
+
+/* Service card hover */
+.service-card {
+  background: var(--color-stone);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-left: 3px solid transparent;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+}
+
+.service-card .sc-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-card .sc-body {
+  margin-top: 0.5rem;
+}
+
+.service-card:hover,
+.service-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(13, 31, 60, 0.10);
+  border-left-color: var(--color-crimson);
+}
+
+@media (min-width: 768px) {
+  .service-card--wide {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 2rem;
+    align-items: start;
+  }
+  .service-card--wide .sc-body {
+    margin-top: 0;
+  }
+}
+
+/* FAQ accordion */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-panel[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.faq-panel > div {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-panel {
+    transition: none;
+  }
+}
+
+/* Nav link hover — default (solid header state) */
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--color-crimson);
+  background: rgba(185, 28, 28, 0.05);
+}
+
+/* Nav link hover — transparent header state (over video) */
+header[data-scrolled="false"] .nav-link:hover,
+header[data-scrolled="false"] .nav-link:focus-visible {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.nav-phone:hover,
+.nav-phone:focus-visible {
+  color: var(--color-navy);
+}
+
+header[data-scrolled="false"] .nav-phone:hover,
+header[data-scrolled="false"] .nav-phone:focus-visible {
+  color: #ffffff;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.mobile-menu[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.mobile-menu > div {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu {
+    transition: none;
+  }
+}
+
+/* Frosted glass stat panel — fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+  .stat-panel {
+    background: rgba(13, 31, 60, 0.85) !important;
+  }
+}
+
+/* Reduced motion: the HeroVideo component skips autoplay so the poster frame
+   shows as a static image (no decode loop, no motion). */
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ELEVATION LAYER — depth, motion & signature interactions
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Subtle film grain over the whole page for tactile depth ───────────── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: reduce) {
+  body::after { opacity: 0.02; }
+}
+
+/* ── Ambient glow utility for dark sections ────────────────────────────── */
+.has-glow { position: relative; overflow: hidden; }
+.has-glow::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  width: 70rem;
+  height: 70rem;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(185, 28, 28, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+.has-glow > * { position: relative; z-index: 1; }
+
+/* ── Hero video ────────────────────────────────────────────────────────
+   No perpetual transform animation: the looping footage supplies the motion,
+   and the HeroVideo component pauses decoding when the hero is offscreen or
+   the tab is hidden. (Avoids a permanently-promoted compositor layer.) */
+
+/* ── Scroll cue ────────────────────────────────────────────────────────── */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
+  50%      { transform: translateY(7px); opacity: 1; }
+}
+.scroll-cue {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(250, 248, 245, 0.7);
+  animation: bob 2.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue { animation: none; }
+}
+
+/* ── Primary button: shimmer sweep + confident lift ────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 70%
+  );
+  transform: translateX(-130%);
+  transition: transform 0.6s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(185, 28, 28, 0.32);
+}
+.btn-primary:hover::after { transform: translateX(130%); }
+.btn-primary:active { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:hover { transform: none; }
+  .btn-primary::after { display: none; }
+}
+
+/* ── Service card: gradient wash, icon recolor, sliding arrow ──────────── */
+.service-card { position: relative; overflow: hidden; isolation: isolate; }
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(130% 130% at 0% 0%, rgba(185, 28, 28, 0.07), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.service-card:hover::before,
+.service-card:focus-visible::before { opacity: 1; }
+
+.sc-icon {
+  color: var(--color-navy);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.service-card:hover .sc-icon,
+.service-card:focus-visible .sc-icon {
+  color: var(--color-crimson);
+  transform: translateY(-2px);
+}
+
+.sc-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-crimson);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.service-card:hover .sc-arrow,
+.service-card:focus-visible .sc-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card:hover .sc-icon { transform: none; }
+  .sc-arrow { transition: opacity 0.25s ease; transform: none; }
+}
+
+/* ── Generic lift for cards (offer, testimonials, guarantee) ───────────── */
+.lift { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(13, 31, 60, 0.12);
+}
+@media (prefers-reduced-motion: reduce) {
+  .lift:hover { transform: none; }
+}
+
+/* ── Marquee ticker ────────────────────────────────────────────────────── */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee__track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 3rem;
+  padding-right: 3rem;
+  animation: marquee 32s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; flex-wrap: wrap; }
+}
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: rgba(250, 248, 245, 0.85);
+}
+.marquee__dot { color: var(--color-crimson); }
+
+/* ── How-it-works timeline ─────────────────────────────────────────────── */
+.timeline { position: relative; }
+.timeline__line {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-crimson), rgba(185, 28, 28, 0.15));
+  transform-origin: left;
+  animation: drawline 1s ease 0.2s both;
+}
+@keyframes drawline {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@media (max-width: 767px) {
+  .timeline__line { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline__line { animation: none; }
+}
+.timeline__num {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-crimson);
+  opacity: 0.18;
+}
+.timeline__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--color-crimson);
+  box-shadow: 0 0 0 5px rgba(185, 28, 28, 0.14);
+}
+
