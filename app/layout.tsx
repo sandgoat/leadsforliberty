@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     default: "Capture Every Call. Book Every Slot. | LeadsforLiberty.com",
   },
   description:
-    "Leads for Liberty captures the calls, texts, emails, and DMs your business already gets and books them straight into your calendar. Done-for-you booking systems for busy service businesses. First month free.",
+    "We capture the calls, texts, emails, and DMs your business already gets and book them into your calendar. Done-for-you booking systems. First month free.",
   keywords: [
     "appointment booking software for service businesses",
     "missed call text back",
