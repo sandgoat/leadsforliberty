@@ -60,7 +60,8 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: "https://www.leadsforliberty.com",
+    // Relative to metadataBase + current route, so each page self-canonicalizes.
+    canonical: "./",
   },
   verification: {
     google: "6ipDDDnhsySPKmkxVZS7kMVcHCegzmhAbdrLXCVH_dk",
