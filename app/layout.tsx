@@ -21,6 +21,8 @@ const outfit = Outfit({
   display: "swap",
 });
 
+const GA4_ID = "G-22LDEBCFVC";
+
 /* ── Metadata ────────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.leadsforliberty.com"),
@@ -59,6 +61,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://www.leadsforliberty.com",
+  },
+  verification: {
+    google: "6ipDDDnhsySPKmkxVZS7kMVcHCegzmhAbdrLXCVH_dk",
   },
 };
 
@@ -314,6 +319,15 @@ export default function RootLayout({
           data-source="WEB_USER"
           strategy="afterInteractive"
         />
+
+        {/* ── Google Analytics 4 ─────────────────────────────────────────── */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","${GA4_ID}");`}
+        </Script>
       </body>
     </html>
   );
