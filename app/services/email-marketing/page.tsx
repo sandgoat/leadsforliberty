@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Email Marketing: Reminders, Rebooking, and Win-Back That Fill Days",
+  title: "Email Marketing: Reminders and Rebooking",
   description:
     "Done-for-you email that confirms appointments, cuts no-shows, prompts rebooking, and wins back lapsed customers, so your calendar stays full from the customers you already have.",
 };

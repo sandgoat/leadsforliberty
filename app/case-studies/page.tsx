@@ -12,7 +12,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Every Inquiry Captured, Every Appointment Booked",
+  title: "Case Studies: Inquiries Captured and Booked",
   description:
     "See how appointment-based service businesses use LeadsforLiberty.com to capture every call, text, and message and turn it into a booked appointment. Honest, founding-client projections.",
 };

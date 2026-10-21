@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Custom Contact Forms: Capture the Right Details and Route Them Instantly",
+  title: "Custom Contact Forms With Instant Routing",
   description:
     "Custom-built forms that capture exactly the fields you need, alert you and your staff by text or email, auto-reply to the customer, and flow into your calendar and pipeline.",
 };

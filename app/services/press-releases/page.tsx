@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Press Releases: Build Trust That Turns Inquiries Into Bookings",
+  title: "Press Releases That Build Trust",
   description:
     "Press coverage and 'as seen on' credibility that make more of the people who find you reach out, and an inbox that captures and books every inquiry they send.",
 };

@@ -10,7 +10,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
-  title: "About LeadsforLiberty | Capture Every Inquiry, Book Every Appointment",
+  title: "About Us: Every Inquiry Captured and Booked",
   description:
     "LeadsforLiberty is a founder-led, mission-driven team that captures every call, text, email, form, and DM your business already gets and turns each one into a booked appointment. No contracts, no setup fees.",
 };

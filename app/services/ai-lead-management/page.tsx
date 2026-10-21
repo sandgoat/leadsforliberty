@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "AI Front Desk: Answers Every Inquiry and Books the Appointment",
+  title: "AI Front Desk That Answers and Books",
   description:
     "An AI front desk that answers calls, texts, emails, forms, and DMs in one inbox, then books the appointment on your calendar, 24/7, so no inquiry ever goes unanswered.",
 };

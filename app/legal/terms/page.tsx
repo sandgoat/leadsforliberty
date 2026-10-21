@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — LeadsforLiberty.com",
+  title: "Terms of Service",
   description:
     "Terms of Service for LeadsforLiberty.com. Read our service agreement, payment terms, lead guarantee parameters, and governing law.",
 };

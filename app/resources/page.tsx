@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BookOpen, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
-  title: "Resource Library | Capture More Inquiries, Book More Appointments",
+  title: "Resources: Capture and Booking Guides",
   description:
     "Free guides, how-tos, and strategy articles for appointment-based service businesses that want to capture every call, text, and message and turn it into a booked appointment.",
 };

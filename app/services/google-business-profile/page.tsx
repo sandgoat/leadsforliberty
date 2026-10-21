@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Google Business Profile: Let Customers Book You From Google",
+  title: "Google Business Profile Setup and Booking",
   description:
     "Google Business Profile optimization with booking enabled, so searchers schedule straight from Google and calls and messages land in one inbox that answers and books.",
 };

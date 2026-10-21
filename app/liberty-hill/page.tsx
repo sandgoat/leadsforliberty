@@ -6,7 +6,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
-  title: "Lead-Capture & Booking System | Built in Liberty Hill, TX",
+  title: "Lead Capture & Booking in Liberty Hill, TX",
   description:
     "Built in Liberty Hill, Texas, LeadsforLiberty captures every call, missed call, text, email, form, and DM your business gets and books it on your calendar automatically. Serving appointment-based businesses anywhere. First month free.",
   keywords: [

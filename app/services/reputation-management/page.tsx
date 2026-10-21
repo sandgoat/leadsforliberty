@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Reputation Management: Reviews on Autopilot After Every Booking",
+  title: "Reputation Management: Reviews on Autopilot",
   description:
     "Automatic review requests after each booked job, plus monitoring and responses, so a steady stream of 5-star reviews turns more inquiries into booked appointments.",
 };

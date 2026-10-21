@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Accessibility Statement — LeadsforLiberty.com",
+  title: "Accessibility Statement",
   description:
     "LeadsforLiberty.com is committed to WCAG 2.1 AA accessibility. Learn about our efforts to ensure an inclusive experience for all visitors.",
 };

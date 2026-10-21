@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "SMS Marketing: Confirmations and Reminders That Keep Bookings",
+  title: "SMS Marketing: Confirmations and Reminders",
   description:
     "Fully managed, compliant SMS that confirms appointments, cuts no-shows, prompts rebooking, and wins back lapsed customers, all linked to a calendar that captures replies and books.",
 };

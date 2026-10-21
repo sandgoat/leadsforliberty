@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryPageLayout from "@/app/components/IndustryPageLayout";
 
 export const metadata: Metadata = {
-  title: "Capture Every Inquiry and Book It | Attorneys, CPAs & Advisors",
+  title: "Capture & Book Every Attorney & CPA Inquiry",
   description:
     "Capture every call, text, and message attorneys, CPAs, financial advisors, and insurance agents already get, and turn each one into a booked consultation.",
 };

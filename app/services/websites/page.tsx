@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Websites That Capture and Book Every Visitor",
+  title: "Websites That Capture and Book Visitors",
   description:
     "Mobile-first, fast-loading websites with online booking, live chat, and forms wired into one inbox, so every visitor inquiry becomes a booked appointment on your calendar.",
 };

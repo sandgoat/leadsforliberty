@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryPageLayout from "@/app/components/IndustryPageLayout";
 
 export const metadata: Metadata = {
-  title: "Capture Every Inquiry and Book It | Contractors & Remodelers",
+  title: "Capture & Book Every Contractor Inquiry",
   description:
     "Capture every call, text, and message your contracting or remodeling business already gets, and turn each one into a booked appointment on your calendar.",
 };

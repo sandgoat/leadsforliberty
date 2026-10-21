@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Missed-Call Text-Back: Turn Missed Calls Into Booked Appointments",
+  title: "Missed-Call Text-Back That Gets You Booked",
   description:
     "Every unanswered call gets an automatic text in seconds that keeps the conversation alive and leads to a booked appointment on your calendar. Set up done-for-you, live in days.",
 };

@@ -20,7 +20,7 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: 'Lead Capture & Booking Services',
   description:
     'Every capability that captures the inquiries you already get, phone calls, missed calls, texts, emails, forms, and DMs, and turns each into a booked appointment on your calendar.',
   alternates: { canonical: 'https://www.leadsforliberty.com/services' },

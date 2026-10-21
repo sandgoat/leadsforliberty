@@ -4,7 +4,7 @@ import { CalendarBlank, Phone, EnvelopeSimple } from "@phosphor-icons/react/dist
 import GhlCalendar from "@/app/components/GhlCalendar";
 
 export const metadata: Metadata = {
-  title: "Book Your Free 30-Minute Walkthrough | LeadsforLiberty.com",
+  title: "Book Your Free 30-Minute Walkthrough",
   description:
     "Book a free 30-minute walkthrough. We'll show you how to capture every call, text, email, and DM your business already gets and turn each into a booked appointment, automatically. First month free.",
 };

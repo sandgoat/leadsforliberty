@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryPageLayout from "@/app/components/IndustryPageLayout";
 
 export const metadata: Metadata = {
-  title: "Capture Every Call and Book It | Auto Detailers, Body Shops & Mechanics",
+  title: "Auto Shops & Detailers: Book Every Call",
   description:
     "Capture every call, text, and message your auto detailing, body shop, or mobile mechanic business already gets, and turn each one into a booked appointment.",
 };

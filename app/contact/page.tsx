@@ -3,7 +3,7 @@ import { MapTrifold } from "@phosphor-icons/react/dist/ssr";
 import ContactForm from "../components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | LeadsforLiberty.com",
+  title: "Contact Us",
   description:
     "Talk to LeadsforLiberty.com about turning every call, text, email, and DM your business already gets into booked appointments on your calendar. First month free, no contracts.",
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Business Texting: A Registered Number That Actually Delivers",
+  title: "Business Texting: A2P 10DLC Registered",
   description:
     "Get your business number A2P 10DLC registered so you can legally text customers and your messages reach the inbox, with two-way conversations wired to your calendar.",
 };

@@ -4,7 +4,7 @@ import { Phone, CalendarCheck, ChatCircleDots, ArrowRight } from '@phosphor-icon
 import VoiceDemoWidget from '../components/VoiceDemoWidget';
 
 export const metadata: Metadata = {
-  title: 'Talk to the AI Receptionist — Live Demo | LeadsforLiberty.com',
+  title: 'Talk to the AI Receptionist: Live Demo',
   description:
     'Call our AI receptionist right from your browser. Ask it anything a customer would, watch it book the appointment, then imagine it answering your phones 24/7.',
   alternates: {
