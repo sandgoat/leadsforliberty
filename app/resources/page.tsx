@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { BookOpen, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
@@ -231,13 +230,13 @@ export default async function ResourcesPage({
                 {featuredPost.description}
               </p>
               <div>
-                <Link
-                  href={`/resources/${featuredPost.slug}`}
-                  className="btn-primary"
-                  aria-label={`Read article: ${featuredPost.title}`}
+                {/* Article pages are not published yet; no link until /resources/[slug] exists (was a 404). */}
+                <span
+                  className="text-sm font-semibold uppercase tracking-widest"
+                  style={{ color: "var(--eagle-gold)", fontFamily: "var(--font-sans)" }}
                 >
-                  Read Article →
-                </Link>
+                  Coming Soon
+                </span>
               </div>
             </div>
           </article>
@@ -293,14 +292,12 @@ export default async function ResourcesPage({
                     >
                       {formatDate(post.publishedAt)}
                     </span>
-                    <Link
-                      href={`/resources/${post.slug}`}
+                    <span
                       className="text-sm font-semibold"
-                      style={{ color: "var(--liberty-blue)", fontFamily: "var(--font-sans)" }}
-                      aria-label={`Read: ${post.title}`}
+                      style={{ color: "#9ca3af", fontFamily: "var(--font-sans)" }}
                     >
-                      Read Article →
-                    </Link>
+                      Coming Soon
+                    </span>
                   </div>
                 </div>
               </article>
