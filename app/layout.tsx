@@ -39,20 +39,17 @@ export const metadata: Metadata = {
     "online booking for service businesses",
     "automated appointment scheduling",
   ],
+  // og:title / og:description and twitter:title / twitter:description are
+  // filled from each page's own title and description; og:url resolves to the
+  // current route (was hard-coded to the homepage on every page).
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.leadsforliberty.com",
+    url: "./",
     siteName: "LeadsforLiberty.com",
-    title: "Capture Every Call. Book Every Slot. | LeadsforLiberty.com",
-    description:
-      "We capture the calls, texts, emails, and DMs you already get and book them into your calendar. Done-for-you booking systems for busy service businesses.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Capture Every Call. Book Every Slot. | LeadsforLiberty.com",
-    description:
-      "We capture the calls, texts, and messages you already get and book them into your calendar. Built for busy service businesses.",
   },
   robots: {
     index: true,
