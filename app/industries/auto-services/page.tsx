@@ -11,7 +11,7 @@ export default function AutoServicesPage() {
   return (
     <IndustryPageLayout
       industry="Auto Services"
-      heroHeadline="Capture Every Call and Message, and Book It on Your Calendar"
+      heroHeadline="Capture Every Auto Shop Call, and Book It on Your Calendar"
       heroSubhead="Keep your bay full by turning every call and text into a booked appointment, automatically."
       painPoints={[
         "You're under a hood when the phone rings, and that customer calls the next shop",

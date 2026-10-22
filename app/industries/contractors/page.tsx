@@ -11,7 +11,7 @@ export default function ContractorsPage() {
   return (
     <IndustryPageLayout
       industry="Contractors"
-      heroHeadline="Capture Every Call and Message, and Book It on Your Calendar"
+      heroHeadline="Capture Every Contractor Inquiry, and Book the Estimate on Your Calendar"
       heroSubhead="Stop letting inquiries slip. Turn every call and text into a booked estimate."
       painPoints={[
         "You're on a job site, the phone rings, and the caller hires whoever picks up first",

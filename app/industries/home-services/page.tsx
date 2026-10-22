@@ -11,7 +11,7 @@ export default function HomeServicesPage() {
   return (
     <IndustryPageLayout
       industry="Home Services"
-      heroHeadline="Capture Every Call and Message, and Book It on Your Calendar"
+      heroHeadline="Capture Every Home Service Call, and Book the Job on Your Calendar"
       heroSubhead="Every call, missed call, and text turned into a booked job, automatically."
       painPoints={[
         "Calls go to voicemail while you're on the job, and those customers call the next company",
