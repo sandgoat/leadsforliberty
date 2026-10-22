@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "SMS Marketing: Confirmations and Reminders",
   description:
-    "Fully managed, compliant SMS that confirms appointments, cuts no-shows, prompts rebooking, and wins back lapsed customers, all linked to a calendar that captures replies and books.",
+    "Managed, compliant SMS that confirms appointments, cuts no-shows, prompts rebooking, and wins back lapsed customers, linked to your calendar.",
 };
 
 export default function SmsMarketingPage() {

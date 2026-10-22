@@ -5,7 +5,7 @@ import ContactForm from "../components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Talk to LeadsforLiberty.com about turning every call, text, email, and DM your business already gets into booked appointments on your calendar. First month free, no contracts.",
+    "Talk to LeadsforLiberty.com about turning every call, text, email, and DM you already get into booked appointments. First month free, no contracts.",
 };
 
 export default function ContactPage() {

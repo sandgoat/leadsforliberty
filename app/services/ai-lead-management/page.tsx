@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "AI Front Desk That Answers and Books",
   description:
-    "An AI front desk that answers calls, texts, emails, forms, and DMs in one inbox, then books the appointment on your calendar, 24/7, so no inquiry ever goes unanswered.",
+    "An AI front desk that answers calls, texts, emails, forms, and DMs in one inbox and books the appointment on your calendar, 24/7.",
 };
 
 export default function AiLeadManagementPage() {

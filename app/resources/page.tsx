@@ -4,7 +4,7 @@ import { BookOpen, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 export const metadata: Metadata = {
   title: "Resources: Capture and Booking Guides",
   description:
-    "Free guides, how-tos, and strategy articles for appointment-based service businesses that want to capture every call, text, and message and turn it into a booked appointment.",
+    "Free guides and how-tos for appointment-based businesses that want to capture every call, text, and message and turn it into a booked appointment.",
 };
 
 /* ── Blog post data (sourced from content/blog/ frontmatter) ────────────── */

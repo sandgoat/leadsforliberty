@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Local SEO: More of the Right Inquiries",
   description:
-    "Local SEO that brings more of the right local inquiries to one inbox that answers and books them, so the visibility you build turns into appointments on your calendar.",
+    "Local SEO that brings more of the right local inquiries to one inbox that answers and books them, turning visibility into booked appointments.",
 };
 
 export default function LocalSeoPage() {

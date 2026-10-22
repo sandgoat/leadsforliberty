@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "About Us: Every Inquiry Captured and Booked",
   description:
-    "LeadsforLiberty is a founder-led, mission-driven team that captures every call, text, email, form, and DM your business already gets and turns each one into a booked appointment. No contracts, no setup fees.",
+    "A founder-led team that captures every call, text, email, form, and DM your business already gets and turns each into a booked appointment. No contracts.",
 };
 
 const values: { icon: ElementType; title: string; desc: string }[] = [

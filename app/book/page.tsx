@@ -6,7 +6,7 @@ import GhlCalendar from "@/app/components/GhlCalendar";
 export const metadata: Metadata = {
   title: "Book Your Free 30-Minute Walkthrough",
   description:
-    "Book a free 30-minute walkthrough. We'll show you how to capture every call, text, email, and DM your business already gets and turn each into a booked appointment, automatically. First month free.",
+    "Book a free 30-minute walkthrough and see how every call, text, email, and DM your business gets can become a booked appointment. First month free.",
 };
 
 // Live GoHighLevel booking calendar (white-label embed from Share > Embed).

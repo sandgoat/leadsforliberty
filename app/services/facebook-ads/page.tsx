@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Facebook & Instagram Ads That Get Booked",
   description:
-    "Managed Facebook and Instagram ads that bring more of the right inquiries to one inbox that answers and books them, so ad interest turns into appointments, not lost messages.",
+    "Managed Facebook and Instagram ads that send the right inquiries to one inbox that answers and books them, so ad interest turns into appointments.",
 };
 
 export default function FacebookAdsPage() {

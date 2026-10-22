@@ -22,7 +22,7 @@ import {
 export const metadata: Metadata = {
   title: 'Lead Capture & Booking Services',
   description:
-    'Every capability that captures the inquiries you already get, phone calls, missed calls, texts, emails, forms, and DMs, and turns each into a booked appointment on your calendar.',
+    'Every capability that captures the calls, missed calls, texts, emails, forms, and DMs you already get and turns each into a booked appointment.',
   alternates: { canonical: 'https://www.leadsforliberty.com/services' },
 };
 

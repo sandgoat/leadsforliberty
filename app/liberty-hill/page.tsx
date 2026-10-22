@@ -8,7 +8,7 @@ import {
 export const metadata: Metadata = {
   title: "Lead Capture & Booking in Liberty Hill, TX",
   description:
-    "Built in Liberty Hill, Texas, LeadsforLiberty captures every call, missed call, text, email, form, and DM your business gets and books it on your calendar automatically. Serving appointment-based businesses anywhere. First month free.",
+    "Built in Liberty Hill, TX: we capture every call, missed call, text, email, form, and DM your business gets and book it on your calendar. First month free.",
   keywords: [
     "lead capture system",
     "missed call text back",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryPageLayout from "@/app/components/IndustryPageLayout";
 
 export const metadata: Metadata = {
-  title: "Dental & Medical: Book Every Patient Inquiry",
+  title: "Dental & Medical: Book Every New Patient",
   description:
     "Capture every call, text, and message your practice already gets, and turn each one into a booked appointment on your calendar, automatically.",
 };

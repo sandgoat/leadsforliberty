@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Email Marketing: Reminders and Rebooking",
   description:
-    "Done-for-you email that confirms appointments, cuts no-shows, prompts rebooking, and wins back lapsed customers, so your calendar stays full from the customers you already have.",
+    "Done-for-you email that confirms appointments, cuts no-shows, prompts rebooking, and wins back lapsed customers to keep your calendar full.",
 };
 
 export default function EmailMarketingPage() {

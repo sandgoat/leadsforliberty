@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Google Business Profile Setup and Booking",
   description:
-    "Google Business Profile optimization with booking enabled, so searchers schedule straight from Google and calls and messages land in one inbox that answers and books.",
+    "Google Business Profile optimization with booking enabled, so searchers schedule from Google and calls and messages land in one inbox that books.",
 };
 
 export default function GoogleBusinessProfilePage() {
