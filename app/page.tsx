@@ -218,7 +218,9 @@ export default function HomePage() {
   return (
     <>
       {/* SECTION 1: HERO — Editorial split with live missed-call demo */}
-      <MotionSection aria-label="Hero" style={{ background: 'var(--color-linen)' }}>
+      {/* Plain section, not MotionSection: the hero holds the LCP text, and a fade-in from opacity 0 kept it
+          unpainted until hydration (Lighthouse mobile LCP 7-8 s, almost all render delay). */}
+      <section aria-label="Hero" style={{ background: 'var(--color-linen)' }}>
         <div
           className="page-container hero-grid"
           style={{ paddingTop: '2.25rem', paddingBottom: '3.5rem' }}
@@ -300,7 +302,7 @@ export default function HomePage() {
             <CalendarDemo />
           </div>
         </div>
-      </MotionSection>
+      </section>
 
       {/* ── Cinematic stats proof strip (replaces inline stat panel) ── */}
       <div
