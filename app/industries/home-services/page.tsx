@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import IndustryPageLayout from "@/app/components/IndustryPageLayout";
 
 export const metadata: Metadata = {
-  title: "Capture & Book Every Home Services Call",
+  title: "Home Service Marketing That Books Calls",
   description:
     "Capture every call, missed call, text, and message your home service business already gets, and turn each one into a booked appointment, automatically.",
 };

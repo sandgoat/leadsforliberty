@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Local SEO: More of the Right Inquiries",
+  title: "Local SEO for Service Businesses",
   description:
     "Local SEO that brings more of the right local inquiries to one inbox that answers and books them, turning visibility into booked appointments.",
 };

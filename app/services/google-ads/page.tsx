@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 
 export const metadata: Metadata = {
-  title: "Google Ads & Local Service Ads That Book",
+  title: "Google Ads & Local Services Ads Management",
   description:
     "Google Search Ads and Local Service Ads that send high-intent searchers to one inbox that answers and books, so every call and click turns into a booked appointment.",
 };

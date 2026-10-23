@@ -6,7 +6,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
-  title: "Lead Capture & Booking in Liberty Hill, TX",
+  title: "Liberty Hill, TX Marketing and Lead Capture",
   description:
     "Built in Liberty Hill, TX: we capture every call, missed call, text, email, form, and DM your business gets and book it on your calendar. First month free.",
   keywords: [
