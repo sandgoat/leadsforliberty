@@ -221,8 +221,8 @@ export default function RootLayout({
                       height: "75px",
                       maxWidth: "60vw",
                       backgroundColor: "#FAF8F5",
-                      WebkitMaskImage: "url(/logo.png)",
-                      maskImage: "url(/logo.png)",
+                      WebkitMaskImage: "url(/logo-mask.png)",
+                      maskImage: "url(/logo-mask.png)",
                       WebkitMaskRepeat: "no-repeat",
                       maskRepeat: "no-repeat",
                       WebkitMaskPosition: "left center",
@@ -309,13 +309,13 @@ export default function RootLayout({
           </div>
         </footer>
 
-        {/* ── GHL SMS chat widget (site-wide; number is A2P 10DLC approved) ── */}
+        {/* ── GHL SMS chat widget (site-wide; number is A2P 10DLC approved). lazyOnload: loads after the page, not during first paint ── */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="6a469fc1eacf7e67b98e6758"
           data-source="WEB_USER"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
 
         {/* ── Google Analytics 4 ─────────────────────────────────────────── */}
