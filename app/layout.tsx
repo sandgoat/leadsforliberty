@@ -99,6 +99,7 @@ const footerColumns = [
       { label: "AI Lead Management",  href: "/services/ai-lead-management" },
       { label: "Websites",            href: "/services/websites" },
       { label: "Reputation Mgmt",     href: "/services/reputation-management" },
+      { label: "All Services",        href: "/services" },
     ],
   },
   {
