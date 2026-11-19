@@ -43,8 +43,8 @@ type Stat = {
   Icon: ElementType;
 };
 const stats: Stat[] = [
-  { value: 50, prefix: '$', suffix: 'K+', label: 'lost to missed calls every year', Icon: Phone },
-  { value: 80, suffix: '%', label: 'of missed calls win back a booking', Icon: PhoneIncoming },
+  { value: 0, prefix: '$', label: 'setup fees, and no contracts', Icon: Phone },
+  { value: 1, label: 'inbox for every call, text, email, and DM', Icon: PhoneIncoming },
   { value: 24, suffix: '/7', label: 'every call, text, and DM captured', Icon: ChatCircle },
 ];
 
@@ -133,7 +133,7 @@ const services: Service[] = [
     slug: 'missed-call-text-back',
     name: 'Missed-Call Text-Back',
     Icon: PhoneIncoming,
-    desc: 'Every missed call gets an instant text with a booking link. Most businesses win back the majority of the calls they used to lose while their hands were full, and it pays for the whole system by itself.',
+    desc: 'Every missed call gets an instant text with a booking link. The calls you miss while your hands are full get a second chance to book instead of going to the next name on the list.',
   },
   { area: 'b', slug: 'ai-lead-management', name: 'AI Front Desk', Icon: Robot, desc: 'Answers and books inquiries 24/7.' },
   { area: 'c', slug: 'google-business-profile', name: 'Book From Google', Icon: CalendarCheck, desc: 'Clients book straight from your Google profile.' },
@@ -145,7 +145,7 @@ const services: Service[] = [
     desc: 'A fast, mobile-first site built to capture inquiries and let clients book in a tap. Every visit becomes a chance to fill an open slot, synced straight to your calendar.',
   },
   { area: 'e', slug: 'reputation-management', name: 'Review Requests', Icon: Star, desc: 'Five-star reviews on autopilot.' },
-  { area: 'f', slug: 'facebook-ads', name: 'Instagram & Facebook DMs', Icon: InstagramLogo, desc: 'Turn DMs and comments into bookings.' },
+  { area: 'f', slug: 'ai-lead-management', name: 'Instagram & Facebook DMs', Icon: InstagramLogo, desc: 'Turn DMs and comments into bookings.' },
   { area: 'g', slug: 'email-marketing', name: 'Reminders & Rebooking', Icon: BellRinging, desc: 'Cut no-shows and win back past clients.' },
   {
     area: 'h',
@@ -154,7 +154,7 @@ const services: Service[] = [
     Icon: MapTrifold,
     desc: 'Show up when nearby customers search for what you do, so more of the right inquiries reach an inbox that actually answers them and books them in.',
   },
-  { area: 'i', slug: 'google-ads', name: 'Two-Way Calendar Sync', Icon: ArrowsClockwise, desc: 'Syncs with Google Calendar. No double-booking.' },
+  { area: 'i', slug: 'ai-lead-management', name: 'Two-Way Calendar Sync', Icon: ArrowsClockwise, desc: 'Syncs with Google Calendar. No double-booking.' },
   { area: 'j', slug: 'business-texting', name: 'Compliant Business Texting', Icon: ChatText, desc: 'Fully A2P 10DLC registered, so your texts actually reach the inbox instead of getting flagged as spam.' },
   { area: 'k', slug: 'chat-widget', name: 'Website Chat Widget', Icon: ChatCircleDots, desc: 'Visitors start a real text conversation right from your site, day or night.' },
 ];
@@ -578,48 +578,28 @@ export default function HomePage() {
       </MotionSection>
 
       {/* SECTION 7: TESTIMONIALS */}
-      <MotionSection aria-label="Client testimonials" className="bg-linen section-sm">
+      <MotionSection aria-label="Founding clients" className="bg-linen section-sm">
         <div className="page-container">
-          <h2
-            className="font-display text-4xl font-bold mb-4 text-navy"
-            style={{ lineHeight: 1.1 }}
-          >
-            What clients say.
-          </h2>
-          <p className="font-body text-base mb-12 max-w-prose text-warm-gray">
-            We are onboarding our first founding clients now. Real results will
-            be published here as they come in.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                className="lift p-6 flex flex-col bg-stone rounded-[10px]"
-                style={{ border: '2px dashed #E4DDD5' }}
+          <div className="p-8 bg-stone rounded-[10px] border border-warm-border md:flex md:items-center md:justify-between md:gap-8">
+            <div className="max-w-prose">
+              <h2
+                className="font-display text-4xl font-bold mb-4 text-navy"
+                style={{ lineHeight: 1.1 }}
               >
-                <p
-                  className="font-body text-xs font-semibold mb-4 text-crimson"
-                  style={{ letterSpacing: '0.06em' }}
-                >
-                  FOUNDING CLIENT SPOT OPEN
-                </p>
-                <div className="flex items-center gap-1 mb-4" aria-label="Five stars">
-                  {[0, 1, 2, 3, 4].map((s) => (
-                    <Star key={s} size={16} weight="fill" color="#B91C1C" aria-hidden="true" />
-                  ))}
-                </div>
-                <p className="font-body text-base italic leading-relaxed mb-6 flex-1 text-warm-gray">
-                  Testimonial coming soon. If you run a service business and you are tired of
-                  missed calls and empty slots, this spot has your name on it.
-                </p>
-                <div className="pt-4 border-t border-warm-border">
-                  <p className="font-body text-sm font-semibold text-navy">
-                    Founding Client
-                  </p>
-                  <p className="font-body text-xs mt-1 text-warm-gray">Founding client</p>
-                </div>
-              </div>
-            ))}
+                Become a founding client
+              </h2>
+              <p className="font-body text-base text-warm-gray">
+                We are onboarding our first clients now, so there are no reviews
+                to show yet. Founding clients get their first month free while we
+                build their system with them.
+              </p>
+            </div>
+            <Link
+              href="/book"
+              className="btn-primary mt-6 md:mt-0 shrink-0"
+            >
+              Book a call
+            </Link>
           </div>
         </div>
       </MotionSection>
