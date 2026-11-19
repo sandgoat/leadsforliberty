@@ -6,7 +6,6 @@ import {
   ChartLineUp,
   House,
   Gear,
-  UserCircle,
 } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
@@ -62,20 +61,9 @@ export default function AboutPage() {
       {/* ── 2. Founder + About the Company ─────────────────────────────── */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div className="grid grid-cols-1 gap-10 items-start">
 
-            {/* Founder placeholder card */}
-            <div className="rounded-2xl border-2 border-dashed border-parchment-400 bg-parchment p-8 flex flex-col items-center text-center gap-4">
-              <div className="w-28 h-28 rounded-full bg-parchment-400 border-2 border-dashed border-parchment-600 flex items-center justify-center">
-                <UserCircle size={56} weight="duotone" className="text-iron opacity-60" aria-hidden="true" />
-              </div>
-              <p className="text-iron text-sm italic opacity-70">
-                [Founder photo and bio to be added with founder approval]
-              </p>
-              <span className="text-xs text-independence-red font-semibold tracking-wider uppercase">
-                Placeholder, Pending Founder Approval
-              </span>
-            </div>
+            {/* Founder photo + bio card goes here once the owner supplies them */}
 
             {/* About the Company */}
             <div className="space-y-5">

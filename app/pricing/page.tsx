@@ -281,20 +281,6 @@ export default function PricingPage() {
                 padding: '2rem',
               }}
             >
-              {/* Badge row */}
-              <div className="flex items-center gap-3 mb-4">
-                <span
-                  className="font-body font-bold text-xs text-white px-2 py-0.5"
-                  style={{
-                    background: '#B91C1C',
-                    borderRadius: 3,
-                    fontFamily: 'var(--font-outfit), sans-serif',
-                  }}
-                >
-                  Most popular
-                </span>
-              </div>
-
               <div className="md:grid md:grid-cols-3 md:gap-10">
                 {/* Left: price + CTA */}
                 <div className="mb-8 md:mb-0">
