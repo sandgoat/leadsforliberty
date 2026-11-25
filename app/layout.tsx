@@ -94,6 +94,8 @@ const footerColumns = [
   {
     heading: "Services",
     links: [
+      { label: "Missed-Call Text-Back", href: "/services/missed-call-text-back" },
+      { label: "Voice AI Receptionist", href: "/services/voice-ai" },
       { label: "Business Texting",    href: "/services/business-texting" },
       { label: "Website Chat Widget", href: "/services/chat-widget" },
       { label: "AI Lead Management",  href: "/services/ai-lead-management" },

@@ -1,0 +1,18 @@
+# SEO backlog: leadsforliberty.com
+
+Ordered by expected conversions per hour. Updated 2026-11-24. Young site: Search Console has no usable data yet, so indexing (level 1) and outside vouching (level 5) come first.
+
+| # | Change | Page | Evidence | Expected effect | Effort | Owner |
+|---|---|---|---|---|---|---|
+| 1 | Add a Search Console Domain property for leadsforliberty.com (DNS TXT record in Vercel DNS), or a URL-prefix property for `https://www.leadsforliberty.com/`, then point the OpenSEO integration at it | sitewide | Connected property is the apex URL-prefix; URL Inspection: apex `/` is "Alternate page with proper canonical tag", Google canonical = www; 0 rows for 3 months | Every later session gets real query, index and click data | 10 min | User |
+| 2 | In the new property, submit `https://www.leadsforliberty.com/sitemap.xml` and request indexing for `/`, `/book`, `/the-offer`, `/pricing`, `/services/missed-call-text-back`, `/services/voice-ai` | money pages | Inner pages are "URL is unknown to Google" on the apex property; last Google crawl of apex `/` was 2026-08-06 | Money pages get crawled and indexed | 10 min | User |
+| 3 | Redirect the apex to www at the Vercel domain level (308) | sitewide | Both `https://leadsforliberty.com/` and `https://www.leadsforliberty.com/` return 200; canonicals point to www | One host collects all signals | 5 min | User (sitewide redirect needs your approval) |
+| 4 | Create or claim a Google Business Profile (service-area business, Liberty Hill TX, address hidden) if none exists, then ask real clients for reviews | off-site | No profile or review data available; GBP tools need DataForSEO (401 this session) | Local pack presence and brand trust | 1 h | User |
+| 5 | Submit core citations with identical NAP (drafts in `seo/outreach/citations.md`) | off-site | No backlink data (401); site is new | First outside signals that the business is real | 1-2 h | User |
+| 6 | Fix DataForSEO credentials on the OpenSEO server and in `~/.claude/skills/seo/.env` | tooling | Every paid call returned DataForSEO HTTP 401; skill preflight shows placeholder credentials | Unblocks keyword, competitor, backlink and GBP research | 10 min | User |
+| 7 | Keyword and SERP research for capture-product searches (missed call text back, AI receptionist, answering service for contractors and similar), then decide which page format ranks | `/services/missed-call-text-back`, `/services/voice-ai` | Not run (no data source) | Picks the 2-3 pages worth deepening | 1 h | Next session |
+| 8 | Real founder photo and bio on `/about` (owner supplies them) | `/about` | Known gap; buyers check who is behind a service before booking | Trust on a pre-booking page | 30 min | User + next session |
+| 9 | Publish the `/resources` articles or trim the list until they exist | `/resources` | 8 article cards with no destination route | Thin page becomes a real hub that links to money pages | High | Later |
+| 10 | Confirm a GA4 key event fires on a completed `/book` booking, using a test calendar rather than the live one | `/book` | Key events exist (`qualify_lead`, `close_convert_lead`, `purchase`) but nothing ties them to a site booking | Organic conversions become measurable | 30 min | User + next session |
+| 11 | Replace `lastModified: now` in `app/sitemap.ts` with real per-page dates | sitemap | Every deploy marks every URL as changed, which teaches Google to ignore lastmod | Small crawl-efficiency gain | 20 min | Next session |
+| 12 | `Service` structured data on service pages and `Organization` with `sameAs` once profiles exist | services | Only LocalBusiness schema sitewide | Clearer entity for Google and AI answers | 1 h | Later |

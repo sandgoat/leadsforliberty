@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Voice AI Agent That Answers 24/7 and Books",
   description:
-    "An AI voice agent that answers your phone around the clock, handles FAQs, books, reschedules, and cancels appointments, and sends payment links, so no call goes unanswered.",
+    "An AI voice agent that answers your phone 24/7, handles FAQs, books, reschedules and cancels appointments, and sends payment links. No call goes unanswered.",
 };
 
 export default function VoiceAiPage() {

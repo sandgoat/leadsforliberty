@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Website Chat Widget: Visitors Into Texts",
   description:
-    "An SMS-based chat widget for your site. A visitor leaves their name, number, and question, you get a text, and you reply from anywhere, with every conversation tied to your calendar.",
+    "An SMS chat widget for your site. Visitors leave a name, number and question, you get a text and reply from anywhere, and every chat ties to your calendar.",
 };
 
 export default function ChatWidgetPage() {

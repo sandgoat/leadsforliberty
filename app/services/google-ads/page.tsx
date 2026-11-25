@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Google Ads & Local Services Ads Management",
   description:
-    "Google Search Ads and Local Service Ads that send high-intent searchers to one inbox that answers and books, so every call and click turns into a booked appointment.",
+    "Google Search Ads and Local Service Ads that send high-intent searchers to one inbox that answers and books every call and click as an appointment.",
 };
 
 export default function GoogleAdsPage() {
