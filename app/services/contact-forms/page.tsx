@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Custom Contact Forms With Instant Routing",
   description:
-    "Custom-built forms that capture exactly the fields you need, alert you and your staff by text or email, auto-reply to the customer, and flow into your calendar and pipeline.",
+    "Custom forms that capture the fields you need, alert your staff by text or email, auto-reply to the customer, and flow into your calendar and pipeline.",
 };
 
 export default function ContactFormsPage() {

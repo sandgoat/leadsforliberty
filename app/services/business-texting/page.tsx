@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Business Texting: A2P 10DLC Registered",
   description:
-    "Get your business number A2P 10DLC registered so you can legally text customers and your messages reach the inbox, with two-way conversations wired to your calendar.",
+    "Get your business number A2P 10DLC registered so you can legally text customers, messages reach the inbox, and two-way chats connect to your calendar.",
 };
 
 export default function BusinessTextingPage() {

@@ -4,7 +4,7 @@ import ServicePageLayout from "@/app/components/ServicePageLayout";
 export const metadata: Metadata = {
   title: "Reputation Management: Reviews on Autopilot",
   description:
-    "Automatic review requests after each booked job, plus monitoring and responses, so a steady stream of 5-star reviews turns more inquiries into booked appointments.",
+    "Automatic review requests after each booked job, plus monitoring and responses, so steady 5-star reviews turn more inquiries into booked appointments.",
 };
 
 export default function ReputationManagementPage() {
